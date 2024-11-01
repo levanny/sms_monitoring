@@ -2,12 +2,13 @@
 # filename_p არის ტელეფონის ნომრების ფაილის მისამართი, ხოლო filename_m არის მეილების.
 def get_numbers_and_mails(filename_p,filename_m):
     with open(filename_p,'r') as f:
-        f = f.read()
+        f = f.read().strip()
     numbers = f.split('\n')
 
     with open(filename_m,'r') as f:
-        f = f.read()
+        f = f.read().strip()
     mails = f.split('\n')
+
 
     return numbers, mails
 
@@ -43,4 +44,5 @@ def check_if_magti_url_is_alive():
         send_warnings(message = f"მაგთის ლინკი გათიშულია\nError: "+f"{err}"[:18])
 
  
-check_if_magti_url_is_alive()
+# check_if_magti_url_is_alive()
+print(get_numbers_and_mails('phone_numbers.txt','emails.txt'))
