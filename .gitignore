@@ -5,3 +5,4 @@ emails.txt
 ies_sms_sender.py
 ies_sms_sender_log
 ies_mail_sender.py
+/__pycache__
